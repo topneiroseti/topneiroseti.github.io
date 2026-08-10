@@ -162,9 +162,17 @@
     var container=document.getElementById(containerId);
     if(!container)return;
 
-    // Готовые отзывы для конкретного сервиса (например STIVA.ai)
+    // Готовые отзывы для конкретного сервиса
     if(seedKey==='stiva-ai' && window.STIVA_REVIEWS){
       renderCustomReviews(container, window.STIVA_REVIEWS, seedKey);
+      return;
+    }
+    if(seedKey==='study24' && window.STUDY24_REVIEWS){
+      renderCustomReviews(container, window.STUDY24_REVIEWS, seedKey);
+      return;
+    }
+    if(seedKey==='fichi-ai' && window.FICHI_REVIEWS){
+      renderCustomReviews(container, window.FICHI_REVIEWS, seedKey);
       return;
     }
 
