@@ -128,7 +128,7 @@
       html+='<div class="review-item"><div class="review-meta"><span class="review-name">'+r.name+'</span><span class="review-date">'+r.date+'</span></div><div class="review-stars">'+renderStars(r.rating)+'</div><div class="review-text">'+r.text+'</div></div>';
     });
 
-    html+='<div class="review-form"><h3>Оставить отзыв</h3><input type="text" id="rev-name" placeholder="Ваше имя" maxlength="50"><select id="rev-rating"><option value="5">5 звёзд — отлично</option><option value="4">4 звезды — хорошо</option><option value="3">3 звезды — нормально</option><option value="2">2 звезды — плохо</option><option value="1">1 звезда — ужасно</option></select><textarea id="rev-text" placeholder="Напишите ваш отзыв..." maxlength="500"></textarea><button onclick="submitReview(\''+seedKey+'\')">Отправить отзыв</button></div>';
+    html+='<div class="review-form"><h3>Оставить отзыв</h3><p style="color:var(--text-muted);font-size:13px;margin-bottom:12px">Отзывы публикуются после модерации.</p><input type="text" id="rev-name" placeholder="Ваше имя" maxlength="50"><select id="rev-rating"><option value="5">5 звёзд — отлично</option><option value="4">4 звезды — хорошо</option><option value="3">3 звезды — нормально</option><option value="2">2 звезды — плохо</option><option value="1">1 звезда — ужасно</option></select><textarea id="rev-text" placeholder="Напишите ваш отзыв..." maxlength="500"></textarea><button onclick="submitReview(\''+seedKey+'\')">Отправить отзыв</button></div>';
 
     container.innerHTML=html;
   };
@@ -141,8 +141,19 @@
     var months2=['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
     var now=new Date();
     var dateStr=now.getDate()+' '+months2[now.getMonth()]+' 2026';
-    addLocalReview(key,{name:name,rating:rating,text:text,date:dateStr});
-    location.reload();
+    
+    // Сохраняем в localStorage как "pending" (не опубликовано)
+    var pendingKey='pending_'+key;
+    var pending=[];
+    try{var s=localStorage.getItem(pendingKey);if(s)pending=JSON.parse(s)}catch(e){}
+    pending.push({name:name,rating:rating,text:text,date:dateStr,service:key,status:'pending',submittedAt:now.toISOString()});
+    localStorage.setItem(pendingKey,JSON.stringify(pending));
+    
+    // Показываем сообщение вместо формы
+    var form=document.querySelector('.review-form');
+    if(form){
+      form.innerHTML='<div style="text-align:center;padding:32px 20px"><div style="font-size:48px;margin-bottom:16px">✅</div><h3 style="color:var(--success);margin-bottom:8px">Отзыв отправлен на модерацию</h3><p style="color:var(--text-muted);font-size:14px">Спасибо! Ваш отзыв будет опубликован после проверки администратором.</p></div>';
+    }
   };
 
   // ============================================================
