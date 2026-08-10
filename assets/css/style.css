@@ -80,8 +80,8 @@ img{max-width:100%;display:block}
 
 /* ===== Page Layout (content + sidebar) ===== */
 .page{padding:40px 20px;max-width:1200px;margin:0 auto}
-.page-layout{display:flex;gap:32px;padding:32px 20px;max-width:1200;margin:0 auto}
-.page-content{flex:1;min-width:0;max-width:800px}
+.page-layout{display:flex;gap:32px;padding:32px 20px;max-width:1200px;margin:0 auto}
+.page-content{flex:1;min-width:0}
 .page-intro{color:var(--text-muted);font-size:16px;margin-bottom:24px}
 .page h1{font-size:30px;margin-bottom:16px}
 .page h2{font-size:22px;margin:24px 0 12px}
