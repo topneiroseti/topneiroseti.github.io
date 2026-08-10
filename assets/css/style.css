@@ -68,14 +68,15 @@ img{max-width:100%;display:block}
 .badge{display:inline-block;padding:3px 10px;border-radius:6px;font-size:11px;font-weight:600;margin-bottom:8px}
 
 /* SEO-блок в категориях */
-.cat-seo-block{margin-top:40px;padding-top:32px;border-top:1px solid var(--border)}
-.cat-seo-block h2{font-size:22px;margin:28px 0 14px}
-.cat-seo-block h2:first-child{margin-top:0}
-.cat-seo-block h3{font-size:16px;margin:20px 0 8px;color:var(--text)}
-.cat-seo-block p{color:var(--text-muted);margin-bottom:12px;line-height:1.7}
-.cat-seo-block ul{margin-bottom:20px;padding-left:22px}
-.cat-seo-block li{margin-bottom:8px;color:var(--text-muted);line-height:1.6}
-.cat-seo-block .info-box p{color:var(--text)}
+.cat-seo-block,.seo-extra{margin-top:40px;padding-top:32px;border-top:1px solid var(--border)}
+.cat-seo-block h2,.seo-extra h2{font-size:22px;margin:28px 0 14px}
+.cat-seo-block h2:first-child,.seo-extra h2:first-child{margin-top:0}
+.cat-seo-block h3,.seo-extra h3{font-size:16px;margin:20px 0 8px;color:var(--text)}
+.cat-seo-block p,.seo-extra p{color:var(--text-muted);margin-bottom:12px;line-height:1.7}
+.cat-seo-block ul,.seo-extra ul{margin-bottom:20px;padding-left:22px}
+.cat-seo-block li,.seo-extra li{margin-bottom:10px;color:var(--text-muted);line-height:1.6}
+.cat-seo-block li strong,.seo-extra li strong{color:var(--text)}
+.cat-seo-block .info-box p,.seo-extra .info-box p{color:var(--text)}
 .page-intro{color:var(--text-muted);font-size:16px;margin-bottom:28px;line-height:1.7;max-width:820px}
 .badge-text{background:#1e3a8a;color:#bfdbfe}
 .badge-image{background:#7c2d12;color:#fed7aa}
