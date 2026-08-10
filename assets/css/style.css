@@ -268,7 +268,7 @@ img{max-width:100%;display:block}
 @media(max-width:768px){
 .header-inner{flex-wrap:wrap;gap:12px}
 .nav{display:none;width:100%;flex-direction:column;order:3}
-.nav.open{display:flex}
+.nav.nav-open{display:flex}
 .nav-link{padding:10px 16px}
 .hamburger{display:flex;order:1}
 .nav-dropdown{position:static;display:flex;flex-direction:column;min-width:100%;box-shadow:none;border:none;padding:0 0 0 16px}

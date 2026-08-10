@@ -1,15 +1,20 @@
-// components.js — вставляет шапку, подвал, рекламную строку на все страницы
+// components.js — вставляет шапку, подвал на все страницы
 // Меняем этот файл — обновляется на всех страницах сайта
 
 (function(){
-  // ===== Рекламная строка сверху (сквозная) =====
-  var topBanner = ''+
-    '<div class="top-banner">'+
-      '<a href="https://stiva.ai">⚡ Все нейросети в одной подписке — STIVA.ai. 80+ моделей от 495 ₽. Оплата МИР и СБП →</a>'+
-    '</div>';
+  // ===== Рекламная строка сверху (СКРЫТА — пока не нужна) =====
+  // Чтобы включить: расскомментируйте блок ниже
+  /*
+  var topBanner = '<div class="top-banner"><a href="https://stiva.ai">⚡ Все нейросети в одной подписке — STIVA.ai. 80+ моделей от 495 ₽. Оплата МИР и СБП →</a></div>';
+  var bannerDiv = document.createElement('div');
+  bannerDiv.innerHTML = topBanner;
+  if(document.body && document.body.firstChild){
+    document.body.insertBefore(bannerDiv.firstChild, document.body.firstChild);
+  }
+  */
 
-  // ===== Шапка (без поиска, с категориями) =====
-  var header = ''+
+  // ===== Шапка с навигацией =====
+  var headerHTML = ''+
     '<div class="header-inner">'+
       '<a href="/" class="logo">Топ<span>Нейросети</span></a>'+
       '<nav class="nav" id="nav">'+
@@ -71,7 +76,7 @@
     '</div>';
 
   // ===== Подвал =====
-  var footer = ''+
+  var footerHTML = ''+
     '<div class="footer-inner">'+
       '<div class="footer-col">'+
         '<div class="logo">Топ<span>Нейросети</span></div>'+
@@ -105,21 +110,36 @@
   fav.href = '/assets/favicon.png';
   document.head.appendChild(fav);
 
-  // ===== Рекламная строка — в начало body (на всех страницах) =====
-  var bannerDiv = document.createElement('div');
-  bannerDiv.innerHTML = topBanner;
-  if(document.body && document.body.firstChild){
-    document.body.insertBefore(bannerDiv.firstChild, document.body.firstChild);
+  // ===== Вставляем шапку =====
+  // Ищем .header ИЛИ #site-header — заменяем содержимое
+  var headerEl = document.querySelector('.header') || document.querySelector('#site-header');
+  if(headerEl){
+    headerEl.innerHTML = headerHTML;
+    headerEl.classList.add('header');
   }
 
-  // ===== Шапка — заменяем inline header на всех страницах =====
-  var headerEl = document.querySelector('.header');
-  if(headerEl){ headerEl.innerHTML = header; }
+  // ===== Вставляем подвал =====
+  var footerEl = document.querySelector('.footer') || document.querySelector('#site-footer');
+  if(footerEl){
+    footerEl.innerHTML = footerHTML;
+    footerEl.classList.add('footer');
+  }
 
-  // ===== Подвал — заменяем inline footer =====
-  var footerEl = document.querySelector('.footer');
-  if(footerEl){ footerEl.innerHTML = footer; }
-
-  // ===== Удаляем CTA-баннеры снизу страниц =====
+  // ===== Удаляем старые CTA-баннеры =====
   document.querySelectorAll('.cta').forEach(function(el){ el.remove(); });
+
+  // ===== Мобильное меню — переключатель =====
+  window.toggleMenu = function(){
+    var nav = document.getElementById('nav');
+    var ham = document.getElementById('hamburger');
+    if(nav){
+      if(nav.classList.contains('nav-open')){
+        nav.classList.remove('nav-open');
+        ham.classList.remove('open');
+      } else {
+        nav.classList.add('nav-open');
+        ham.classList.add('open');
+      }
+    }
+  };
 })();
