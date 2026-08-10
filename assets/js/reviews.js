@@ -60,23 +60,42 @@
   function genReviews(count,ratingBase){
     var reviews=[];
     var baseRating=ratingBase||4;
-    for(var i=0;i<count;i++){
+    var usedTexts={};   // тексты не повторяем
+    var usedNames={};   // имена не повторяем
+    var guard=0;
+
+    while(reviews.length<count && guard<count*40){
+      guard++;
       var name=pick(names);
+      if(usedNames[name]) continue;
+
       var rating;
-      // Distribute ratings around the base
-      if(baseRating>=4){
+      if(baseRating>=4.5){
+        rating=pick([5,5,5,4,4,4,5,4]);
+      } else if(baseRating>=4){
         rating=pick([5,5,4,4,4,3,5,4]);
       } else if(baseRating>=3){
         rating=pick([4,4,3,3,3,5,2,4]);
       } else {
         rating=pick([3,3,2,2,2,4,3,1]);
       }
+
       var text=genReviewText(rating);
+      if(usedTexts[text]) continue;
+
+      usedNames[name]=1;
+      usedTexts[text]=1;
+
       var d=rand(1,28);
       var m=rand(0,7);
-      var y=2026;
-      reviews.push({name:name,rating:rating,text:text,date:d+' '+months[m]+' '+y});
+      reviews.push({
+        name:name, rating:rating, text:text,
+        date:d+' '+months[m]+' 2026',
+        _sort:(m*100)+d   // для сортировки: свежие сверху
+      });
     }
+    // Сортируем по дате — новые первыми
+    reviews.sort(function(a,b){return b._sort-a._sort});
     return reviews;
   }
 
