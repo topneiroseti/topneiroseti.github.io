@@ -63,7 +63,7 @@
             '</div>'+
             '<div class="nav-dropdown-col">'+
               '<h5>Другое</h5>'+
-              '<a href="/categories/programming/">Программирование</a>'+
+              '<a href="/categories/programming/">Вайбкодинг</a>'+
               '<a href="/categories/agents/">ИИ-агенты</a>'+
               '<a href="/categories/api/">API</a>'+
             '</div>'+
