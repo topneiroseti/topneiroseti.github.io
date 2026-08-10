@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Рейтинг нейросетей 2026 — топ 26 сервисов | ТопНейросети</title>
+<meta name="description" content="Рейтинг нейросетей и агрегаторов 2026: 26 сервисов отсортированы по оценкам пользователей. Сравните рейтинги, отзывы и категории.">
+<meta name="keywords" content="рейтинг нейросетей, топ нейросетей 2026, лучшие нейросети, сравнение нейросетей">
+<meta property="og:title" content="Рейтинг нейросетей 2026 — ТопНейросети">
+<meta property="og:description" content="26 нейросетей и агрегаторов в едином рейтинге. Сортировка по оценкам.">
+<meta property="og:image" content="https://stiva.ai/media/75e6262c-161e-49dd-8083-bfd43eec1a16-img_ce0d4d89ed42.png">
+<meta property="og:url" content="https://topneiroseti.github.io/rating/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Рейтинг нейросетей 2026 — ТопНейросети">
+<meta name="twitter:description" content="26 нейросетей и агрегаторов в едином рейтинге. Сортировка по оценкам.">
+<link rel="canonical" href="https://topneiroseti.github.io/rating/">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://topneiroseti.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Рейтинг", "item": "https://topneiroseti.github.io/rating/"}]}</script>
+</head>
+<body>
+<header class="header">
+<div class="header-inner">
+<a href="../" class="logo">Топ<span>Нейросети</span></a>
+<nav class="nav" id="nav">
+<a href="../models/" class="nav-link">Нейросети</a>
+<a href="../competitors/" class="nav-link">Агрегаторы</a>
+<a href="../rating/" class="nav-link">Рейтинг</a>
+<a href="../reviews/" class="nav-link">Отзывы</a>
+</nav>
+<div class="search">
+<input type="text" id="search" placeholder="Поиск нейросети..." oninput="filterCards()" autocomplete="off">
+<div class="search-results" id="search-results"></div>
+</div>
+<button class="hamburger" id="hamburger" aria-label="Меню" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</button>
+</div>
+</header>
+
+<div class="page">
+<nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="../">Главная</a> <span class="bc-sep">›</span> <span>Рейтинг</span></nav>
+<h1>Рейтинг нейросетей 2026</h1>
+<p class="page-intro">26 нейросетей и агрегаторов, отсортированных по рейтингу пользователей.</p>
+
+<div class="rating-controls">
+<label>Сортировать по:
+<select id="sort-select" onchange="sortRating()">
+<option value="rating-desc">Рейтинг ↓</option>
+<option value="rating-asc">Рейтинг ↑</option>
+<option value="reviews-desc">Отзывов ↓</option>
+<option value="reviews-asc">Отзывов ↑</option>
+<option value="name-asc">Название А-Я</option>
+</select>
+</label>
+</div>
+
+<table class="rating-table" id="rating-table">
+<thead>
+<tr>
+<th>#</th>
+<th>Название</th>
+<th>Категория</th>
+<th>Рейтинг</th>
+<th>Отзывов</th>
+</tr>
+</thead>
+<tbody>
+<tr data-rating="4.9" data-reviews="62" data-name="midjourney">
+<td class="rank">1</td>
+<td class="service-name"><a href="../models/midjourney/">Midjourney</a></td>
+<td><span class="badge badge-image">Изображения</span></td>
+<td class="rating-cell"><span class="stars">★★★★★</span> <strong>4.9</strong></td>
+<td>62</td>
+</tr>
+<tr data-rating="4.9" data-reviews="47" data-name="chatgpt">
+<td class="rank">2</td>
+<td class="service-name"><a href="../models/chatgpt/">ChatGPT</a></td>
+<td><span class="badge badge-text">Текст</span></td>
+<td class="rating-cell"><span class="stars">★★★★★</span> <strong>4.9</strong></td>
+<td>47</td>
+</tr>
+<tr data-rating="4.8" data-reviews="38" data-name="claude">
+<td class="rank">3</td>
+<td class="service-name"><a href="../models/claude/">Claude</a></td>
+<td><span class="badge badge-text">Текст</span></td>
+<td class="rating-cell"><span class="stars">★★★★★</span> <strong>4.8</strong></td>
+<td>38</td>
+</tr>
+<tr data-rating="4.5" data-reviews="29" data-name="suno">
+<td class="rank">4</td>
+<td class="service-name"><a href="../models/suno/">Suno</a></td>
+<td><span class="badge badge-audio">Аудио</span></td>
+<td class="rating-cell"><span class="stars">★★★★★</span> <strong>4.5</strong></td>
+<td>29</td>
+</tr>
+<tr data-rating="4.5" data-reviews="27" data-name="kling ai">
+<td class="rank">5</td>
+<td class="service-name"><a href="../models/kling/">Kling AI</a></td>
+<td><span class="badge badge-video">Видео</span></td>
+<td class="rating-cell"><span class="stars">★★★★★</span> <strong>4.5</strong></td>
+<td>27</td>
+</tr>
+<tr data-rating="4.4" data-reviews="31" data-name="deepseek">
+<td class="rank">6</td>
+<td class="service-name"><a href="../models/deepseek/">DeepSeek</a></td>
+<td><span class="badge badge-text">Текст</span></td>
+<td class="rating-cell"><span class="stars">★★★★☆</span> <strong>4.4</strong></td>
+<td>31</td>
+</tr>
+<tr data-rating="4.3" data-reviews="44" data-name="gigachat">
+<td class="rank">7</td>
+<td class="service-name"><a href="../models/gigachat/">GigaChat</a></td>
+<td><span class="badge badge-text">Текст</span></td>
+<td class="rating-cell"><span class="stars">★★★★☆</span> <strong>4.3</strong></td>
+<td>44</td>
+</tr>
+<tr data-rating="4.3" data-reviews="19" data-name="recraft">
+<td class="rank">8</td>
+<td class="service-name"><a href="../models/recraft/">Recraft</a></td>
+<td><span class="badge badge-image">Изображения</span></td>
+<td class="rating-cell"><span class="stars">★★★★☆</span> <strong>4.3</strong></td>
+<td>19</td>
+</tr>
+<tr data-rating="4.3" data-reviews="17" data-name="mistral ai">
+<td class="rank">9</td>
+<td class="service-name"><a href="../models/mistral/">Mistral AI</a></td>
+<td><span class="badge badge-text">Текст</span></td>
+<td class="rating-cell"><span class="stars">★★★★☆</span> <strong>4.3</strong></td>
+<td>17</td>
+</tr>
+<tr data-rating="4.2" data-reviews="52" data-name="яндекс алиса">
+<td class="rank">10</td>
+<td class="service-name"><a href="../models/yandex-alice/">Яндекс Алиса</a></td>
+<td><span class="badge badge-text">Текст</span></td>
+<td class="rating-cell"><span class="stars">★★★★☆</span> <strong>4.2</strong></td>
+<td>52</td>
+</tr>
+<tr data-rating="4.2" data-reviews="21" data-name="minimax">
+<td class="rank">11</td>
+<td class="service-name"><a href="../models/minimax/">MiniMax</a></td>
+<td><span class="badge badge-video">Видео</span></td>
+<td class="rating-cell"><span class="stars">★★★★☆</span> <strong>4.2</strong></td>
+<td>21</td>
+</tr>
+<tr data-rating="4.1" data-reviews="15" data-name="krea">
+<td class="rank">12</td>
+<td class="service-name"><a href="../models/krea/">Krea</a></td>
+<td><span class="badge badge-image">Изображения</span></td>
+<td class="rating-cell"><span class="stars">★★★★☆</span> <strong>4.1</strong></td>
+<td>15</td>
+</tr>
+<tr data-rating="4.0" data-reviews="14" data-name="meta ai">
+<td class="rank">13</td>
+<td class="service-name"><a href="../models/meta/">Meta AI</a></td>
+<td><span class="badge badge-text">Текст</span></td>
+<td class="rating-cell"><span class="stars">★★★★☆</span> <strong>4.0</strong></td>
+<td>14</td>
+</tr>
+<tr data-rating="4.0" data-reviews="12" data-name="bria ai">
+<td class="rank">14</td>
+<td class="service-name"><a href="../models/bria/">Bria AI</a></td>
+<td><span class="badge badge-image">Изображения</span></td>
+<td class="rating-cell"><span class="stars">★★★★☆</span> <strong>4.0</strong></td>
+<td>12</td>
+</tr>
+<tr data-rating="3.4" data-reviews="23" data-name="gptunnel">
+<td class="rank">15</td>
+<td class="service-name"><a href="../competitors/gptunnel/">GPTunnel</a></td>
+<td><span class="badge badge-aggregator">Агрегатор</span></td>
+<td class="rating-cell"><span class="stars">★★★☆☆</span> <strong>3.4</strong></td>
+<td>23</td>
+</tr>
+<tr data-rating="3.2" data-reviews="18" data-name="mashagpt">
+<td class="rank">16</td>
+<td class="service-name"><a href="../competitors/mashagpt/">MashaGPT</a></td>
+<td><span class="badge badge-aggregator">Агрегатор</span></td>
+<td class="rating-cell"><span class="stars">★★★☆☆</span> <strong>3.2</strong></td>
+<td>18</td>
+</tr>
+<tr data-rating="3.1" data-reviews="14" data-name="study24">
+<td class="rank">17</td>
+<td class="service-name"><a href="../competitors/study24/">Study24</a></td>
+<td><span class="badge badge-aggregator">Агрегатор</span></td>
+<td class="rating-cell"><span class="stars">★★★☆☆</span> <strong>3.1</strong></td>
+<td>14</td>
+</tr>
+<tr data-rating="3.0" data-reviews="11" data-name="rugpt">
+<td class="rank">18</td>
+<td class="service-name"><a href="../competitors/rugpt/">RuGPT</a></td>
+<td><span class="badge badge-aggregator">Агрегатор</span></td>
+<td class="rating-cell"><span class="stars">★★★☆☆</span> <strong>3.0</strong></td>
+<td>11</td>
+</tr>
+<tr data-rating="2.9" data-reviews="9" data-name="aily">
+<td class="rank">19</td>
+<td class="service-name"><a href="../competitors/aily/">Aily</a></td>
+<td><span class="badge badge-aggregator">Агрегатор</span></td>
+<td class="rating-cell"><span class="stars">★★★☆☆</span> <strong>2.9</strong></td>
+<td>9</td>
+</tr>
+<tr data-rating="2.9" data-reviews="8" data-name="era2">
+<td class="rank">20</td>
+<td class="service-name"><a href="../competitors/era2/">Era2</a></td>
+<td><span class="badge badge-aggregator">Агрегатор</span></td>
+<td class="rating-cell"><span class="stars">★★★☆☆</span> <strong>2.9</strong></td>
+<td>8</td>
+</tr>
+<tr data-rating="2.8" data-reviews="7" data-name="fichi ai">
+<td class="rank">21</td>
+<td class="service-name"><a href="../competitors/fichi-ai/">Fichi AI</a></td>
+<td><span class="badge badge-aggregator">Агрегатор</span></td>
+<td class="rating-cell"><span class="stars">★★★☆☆</span> <strong>2.8</strong></td>
+<td>7</td>
+</tr>
+<tr data-rating="2.8" data-reviews="6" data-name="ranvik">
+<td class="rank">22</td>
+<td class="service-name"><a href="../competitors/ranvik/">Ranvik</a></td>
+<td><span class="badge badge-aggregator">Агрегатор</span></td>
+<td class="rating-cell"><span class="stars">★★★☆☆</span> <strong>2.8</strong></td>
+<td>6</td>
+</tr>
+<tr data-rating="2.7" data-reviews="5" data-name="air fail">
+<td class="rank">23</td>
+<td class="service-name"><a href="../competitors/air-fail/">Air Fail</a></td>
+<td><span class="badge badge-aggregator">Агрегатор</span></td>
+<td class="rating-cell"><span class="stars">★★★☆☆</span> <strong>2.7</strong></td>
+<td>5</td>
+</tr>
+<tr data-rating="2.7" data-reviews="5" data-name="gpt portal">
+<td class="rank">24</td>
+<td class="service-name"><a href="../competitors/gptportal/">GPT Portal</a></td>
+<td><span class="badge badge-aggregator">Агрегатор</span></td>
+<td class="rating-cell"><span class="stars">★★★☆☆</span> <strong>2.7</strong></td>
+<td>5</td>
+</tr>
+<tr data-rating="2.6" data-reviews="4" data-name="floctor">
+<td class="rank">25</td>
+<td class="service-name"><a href="../competitors/floctor/">Floctor</a></td>
+<td><span class="badge badge-aggregator">Агрегатор</span></td>
+<td class="rating-cell"><span class="stars">★★★☆☆</span> <strong>2.6</strong></td>
+<td>4</td>
+</tr>
+<tr data-rating="2.6" data-reviews="4" data-name="leingpt">
+<td class="rank">26</td>
+<td class="service-name"><a href="../competitors/leingpt/">LeinGPT</a></td>
+<td><span class="badge badge-aggregator">Агрегатор</span></td>
+<td class="rating-cell"><span class="stars">★★★☆☆</span> <strong>2.6</strong></td>
+<td>4</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-col">
+<div class="logo">Топ<span>Нейросети</span></div>
+<p>Каталог нейросетей 2026: обзоры, отзывы, рейтинги.</p>
+</div>
+<div class="footer-col">
+<h4>Разделы</h4>
+<a href="../models/">Нейросети</a>
+<a href="../competitors/">Агрегаторы</a>
+<a href="../rating/">Рейтинг</a>
+<a href="../reviews/">Отзывы</a>
+</div>
+<div class="footer-col">
+<h4>Категории</h4>
+<a href="../models/">Текст</a>
+<a href="../models/">Изображения</a>
+<a href="../models/">Видео</a>
+<a href="../models/">Аудио</a>
+</div>
+<div class="footer-col">
+<h4>О проекте</h4>
+<p>© 2026 ТопНейросети</p>
+<a href="https://stiva.ai">STIVA.ai</a>
+</div>
+</div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script>sortRating()</script>
+</body>
+</html>
