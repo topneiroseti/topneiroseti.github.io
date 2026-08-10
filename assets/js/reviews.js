@@ -100,11 +100,27 @@
   window.initReviews=function(containerId,seedKey,genCount,ratingBase){
     var container=document.getElementById(containerId);
     if(!container)return;
-    var gen=genReviews(genCount||6,ratingBase);
+    
+    // Читаем рейтинг и количество отзывов со страницы
+    var pageRatingEl=document.querySelector('.page-rating .rating-value')||document.querySelector('.rating-value');
+    var pageReviewsEl=document.querySelector('.page-rating .review-count')||document.querySelector('.review-count');
+    var pageRating=pageRatingEl?parseFloat(pageRatingEl.textContent):4.5;
+    var pageReviewsText=pageReviewsEl?pageReviewsEl.textContent:'0';
+    var pageReviewsCount=parseInt(pageReviewsText.replace(/\D/g,''))||0;
+    
+    // Базовый рейтинг для генерации
+    var baseRating=ratingBase||pageRating;
+    
+    // Количество генерируемых отзывов
+    var count=genCount||Math.max(6,Math.min(12,Math.round(pageReviewsCount/8)));
+    
+    var gen=genReviews(count,baseRating);
     var local=getLocalReviews(seedKey);
     var all=local.concat(gen);
-    var total=all.length;
-    var avg=all.reduce(function(s,r){return s+r.rating},0)/total;
+    
+    // Средний рейтинг = рейтинг со страницы (не пересчитываем)
+    var avg=pageRating;
+    var total=pageReviewsCount>0?pageReviewsCount:all.length;
 
     var html='<div class="reviews-header"><h2>Отзывы</h2><div class="reviews-summary"><span class="big-rating">'+avg.toFixed(1)+'</span><span class="stars">'+renderStars(Math.round(avg))+'</span><span class="review-count">'+total+' отзывов</span></div></div>';
 
