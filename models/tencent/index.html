@@ -20,8 +20,7 @@
 <body>
 <header class="header"></header>
 
-<div class="page-layout">
-<div class="page-content">
+<div class="page">
 <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="../../">Главная</a> <span class="bc-sep">›</span> <a href="../../models/">Нейросети</a> <span class="bc-sep">›</span> <span>Tencent</span></nav>
 <h1>Tencent</h1>
 
@@ -102,42 +101,44 @@
 <span class="review-count">8 отзывов</span>
 </div>
 <div id="reviews" class="reviews"></div>
-</div>
-
-<aside class="sidebar">
-<h3>Похожие нейросети</h3>
-<a href="../alibaba/" class="sidebar-card">
-<div class="sidebar-card-body">
+<section class="related-block">
+<h2>Похожие нейросети</h2>
+<div class="card-grid">
+<a href="/alibaba/" class="card">
+<div class="card-img-placeholder">Alibaba / Qwen</div>
+<div class="card-body">
 <span class="badge badge-text">Текст</span>
 <strong>Alibaba / Qwen</strong>
-<span class="sidebar-rating">★★★★☆ 4.3</span>
+<span class="card-rating">★★★★☆ 4.3</span>
 </div>
 </a>
-<a href="../amazon/" class="sidebar-card">
-<div class="sidebar-card-body">
+<a href="/amazon/" class="card">
+<div class="card-img-placeholder">Amazon</div>
+<div class="card-body">
 <span class="badge badge-text">Текст</span>
 <strong>Amazon</strong>
-<span class="sidebar-rating">★★★★☆ 4.0</span>
+<span class="card-rating">★★★★☆ 4.0</span>
 </div>
 </a>
-<a href="../anthropic/" class="sidebar-card">
+<a href="/anthropic/" class="card">
 <img src="https://stiva.ai/media/0cfde0ce-9493-4fab-a6cd-1389066847cc-img_069984f346a9.png" alt="Anthropic" loading="lazy">
-<div class="sidebar-card-body">
+<div class="card-body">
 <span class="badge badge-text">Текст</span>
 <strong>Anthropic</strong>
-<span class="sidebar-rating">★★★★★ 4.8</span>
+<span class="card-rating">★★★★★ 4.8</span>
 </div>
 </a>
-<a href="../baidu/" class="sidebar-card">
-<div class="sidebar-card-body">
+<a href="/baidu/" class="card">
+<div class="card-img-placeholder">Baidu</div>
+<div class="card-body">
 <span class="badge badge-text">Текст</span>
 <strong>Baidu</strong>
-<span class="sidebar-rating">★★★★☆ 4.0</span>
+<span class="card-rating">★★★★☆ 4.0</span>
 </div>
 </a>
-</aside>
 </div>
-
+</section>
+</div>
 <footer class="footer"></footer>
 <script src="/assets/js/reviews.js"></script>
 <script>initReviews('reviews','tencent',8)</script>

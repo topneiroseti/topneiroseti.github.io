@@ -116,10 +116,58 @@
     return s;
   }
 
+  // Рендер готового набора отзывов (STIVA.ai и др.)
+  function renderCustomReviews(container, list, seedKey){
+    var total=list.length;
+    var avg=list.reduce(function(s,r){return s+r.r},0)/total;
+    var SHOW=8;
+
+    var html='<div class="reviews-header"><h2>Отзывы</h2><div class="reviews-summary">'+
+      '<span class="big-rating">'+avg.toFixed(1)+'</span>'+
+      '<span class="stars">'+renderStars(Math.round(avg))+'</span>'+
+      '<span class="review-count">'+total+' отзывов</span></div></div>';
+
+    list.forEach(function(r,i){
+      var hidden=i>=SHOW?' rev-hidden':'';
+      html+='<div class="review-item'+hidden+'">'+
+        '<div class="review-meta"><span class="review-name">'+r.n+'</span>'+
+        '<span class="review-date">'+r.d+'</span></div>'+
+        '<div class="review-stars">'+renderStars(r.r)+'</div>'+
+        '<div class="review-text">'+r.t+'</div></div>';
+    });
+
+    if(total>SHOW){
+      html+='<button class="reviews-more" onclick="showAllReviews(this)">Показать все отзывы ('+total+')</button>';
+    }
+
+    html+='<div class="review-form"><h3>Оставить отзыв</h3>'+
+      '<p style="color:var(--text-muted);font-size:13px;margin-bottom:12px">Отзывы публикуются после модерации.</p>'+
+      '<input type="text" id="rev-name" placeholder="Ваше имя" maxlength="50">'+
+      '<select id="rev-rating"><option value="5">5 звёзд — отлично</option><option value="4">4 звезды — хорошо</option>'+
+      '<option value="3">3 звезды — нормально</option><option value="2">2 звезды — плохо</option>'+
+      '<option value="1">1 звезда — ужасно</option></select>'+
+      '<textarea id="rev-text" placeholder="Напишите ваш отзыв..." maxlength="500"></textarea>'+
+      '<button onclick="submitReview(\''+seedKey+'\')">Отправить отзыв</button></div>';
+
+    container.innerHTML=html;
+  }
+
+  window.showAllReviews=function(btn){
+    var items=btn.parentNode.querySelectorAll('.rev-hidden');
+    for(var i=0;i<items.length;i++){items[i].classList.remove('rev-hidden')}
+    btn.remove();
+  };
+
   window.initReviews=function(containerId,seedKey,genCount,ratingBase){
     var container=document.getElementById(containerId);
     if(!container)return;
-    
+
+    // Готовые отзывы для конкретного сервиса (например STIVA.ai)
+    if(seedKey==='stiva-ai' && window.STIVA_REVIEWS){
+      renderCustomReviews(container, window.STIVA_REVIEWS, seedKey);
+      return;
+    }
+
     // Читаем рейтинг и количество отзывов со страницы
     var pageRatingEl=document.querySelector('.page-rating .rating-value')||document.querySelector('.rating-value');
     var pageReviewsEl=document.querySelector('.page-rating .review-count')||document.querySelector('.review-count');

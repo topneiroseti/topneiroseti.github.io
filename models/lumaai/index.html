@@ -21,8 +21,7 @@
 <body>
 <header class="header"></header>
 
-<div class="page-layout">
-<div class="page-content">
+<div class="page">
 <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="../../">Главная</a> <span class="bc-sep">›</span> <a href="../../models/">Нейросети</a> <span class="bc-sep">›</span> <span>Luma AI</span></nav>
 <h1>Luma AI</h1>
 
@@ -133,41 +132,44 @@
 <div class="info-box" style="margin-top:28px"><p><strong>Все нейросети в одной подписке.</strong> Вместо отдельной оплаты каждого сервиса можно подключить агрегатор <a href="/aggregators/stiva-ai/">STIVA.ai</a> — 80+ моделей: текст, изображения, видео и аудио. Оплата картой МИР и через СБП, без VPN.</p></div>
 </div>
 <div id="reviews" class="reviews"></div>
-</div>
-
-<aside class="sidebar">
-<h3>Похожие нейросети</h3>
-<a href="../bytedance/" class="sidebar-card">
-<div class="sidebar-card-body">
+<section class="related-block">
+<h2>Похожие нейросети</h2>
+<div class="card-grid">
+<a href="/bytedance/" class="card">
+<div class="card-img-placeholder">ByteDance</div>
+<div class="card-body">
 <span class="badge badge-video">Видео</span>
 <strong>ByteDance</strong>
-<span class="sidebar-rating">★★★★☆ 4.4</span>
+<span class="card-rating">★★★★☆ 4.4</span>
 </div>
 </a>
-<a href="../did/" class="sidebar-card">
-<div class="sidebar-card-body">
+<a href="/did/" class="card">
+<div class="card-img-placeholder">D-ID</div>
+<div class="card-body">
 <span class="badge badge-video">Видео</span>
 <strong>D-ID</strong>
-<span class="sidebar-rating">★★★★☆ 4.0</span>
+<span class="card-rating">★★★★☆ 4.0</span>
 </div>
 </a>
-<a href="../hedra/" class="sidebar-card">
-<div class="sidebar-card-body">
+<a href="/hedra/" class="card">
+<div class="card-img-placeholder">Hedra</div>
+<div class="card-body">
 <span class="badge badge-video">Видео</span>
 <strong>Hedra</strong>
-<span class="sidebar-rating">★★★★☆ 4.1</span>
+<span class="card-rating">★★★★☆ 4.1</span>
 </div>
 </a>
-<a href="../heygen/" class="sidebar-card">
-<div class="sidebar-card-body">
+<a href="/heygen/" class="card">
+<div class="card-img-placeholder">HeyGen</div>
+<div class="card-body">
 <span class="badge badge-video">Видео</span>
 <strong>HeyGen</strong>
-<span class="sidebar-rating">★★★★☆ 4.4</span>
+<span class="card-rating">★★★★☆ 4.4</span>
 </div>
 </a>
-</aside>
 </div>
-
+</section>
+</div>
 <footer class="footer"></footer>
 <script src="/assets/js/reviews.js"></script>
 <script>initReviews('reviews','lumaai',15)</script>
