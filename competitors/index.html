@@ -20,29 +20,27 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 </head>
 <body>
-<header class="header">
-<div class="header-inner">
-<a href="../" class="logo">Топ<span>Нейросети</span></a>
-<nav class="nav" id="nav">
-<a href="../models/" class="nav-link">Нейросети</a>
-<a href="../competitors/" class="nav-link">Агрегаторы</a>
-<a href="../rating/" class="nav-link">Рейтинг</a>
-<a href="../reviews/" class="nav-link">Отзывы</a>
-</nav>
-<div class="search">
-<input type="text" id="search" placeholder="Поиск нейросети..." oninput="filterCards()" autocomplete="off">
-<div class="search-results" id="search-results"></div>
-</div>
-<button class="hamburger" id="hamburger" aria-label="Меню" onclick="toggleMenu()">
-<span></span><span></span><span></span>
-</button>
-</div>
-</header>
+<header class="header"></header>
 
 <div class="page">
 <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="../">Главная</a> <span class="bc-sep">›</span> <span>Агрегаторы</span></nav>
 <h1>Агрегаторы нейросетей</h1>
 <p class="page-intro">12 сервисов доступа к нейросетям из России. Сравните тарифы, возможности и отзывы.</p>
+
+<div class="featured-card rank-1" style="width:100%;max-width:none;display:flex;flex-direction:row;align-items:center;gap:24px;">
+<img src="https://stiva.ai/media/de64ff92-975d-4fbb-b9ca-143cf8f8822f-stiva_ai.png" alt="STIVA.ai" loading="lazy" style="width:200px;height:120px;object-fit:cover;border-radius:8px;">
+<div style="flex:1;">
+<div class="winner-badge">🥇 #1</div>
+<h3>STIVA.ai</h3>
+<p>80+ моделей: текст, изображения, видео, аудио. Оплата МИР и СБП, без VPN. От 495 ₽/мес.</p>
+<div class="featured-rating">
+<span class="stars">★★★★★</span>
+<span class="rating-value">5.0</span>
+<span class="review-count">128 отзывов</span>
+</div>
+<a class="card-link" href="../aggregators/stiva-ai/" style="display:inline-block;width:auto;padding:10px 28px;">Подробнее</a>
+</div>
+</div>
 
 <div class="card-grid">
 <div class="card" data-name="gptunnel gptunnel  агрегатор">
@@ -169,33 +167,7 @@
 
 </div>
 
-<footer class="footer">
-<div class="footer-inner">
-<div class="footer-col">
-<div class="logo">Топ<span>Нейросети</span></div>
-<p>Каталог нейросетей 2026: обзоры, отзывы, рейтинги.</p>
-</div>
-<div class="footer-col">
-<h4>Разделы</h4>
-<a href="../models/">Нейросети</a>
-<a href="../competitors/">Агрегаторы</a>
-<a href="../rating/">Рейтинг</a>
-<a href="../reviews/">Отзывы</a>
-</div>
-<div class="footer-col">
-<h4>Категории</h4>
-<a href="../models/">Текст</a>
-<a href="../models/">Изображения</a>
-<a href="../models/">Видео</a>
-<a href="../models/">Аудио</a>
-</div>
-<div class="footer-col">
-<h4>О проекте</h4>
-<p>© 2026 ТопНейросети</p>
-<a href="https://stiva.ai">STIVA.ai</a>
-</div>
-</div>
-</footer>
+<footer class="footer"></footer>
 <script src="../assets/js/main.js"></script>
 <script src="/assets/js/components.js"></script>
 </body>

@@ -1,75 +1,125 @@
-// components.js — вставляет шапку, подвал, баннеры на все страницы
+// components.js — вставляет шапку, подвал, рекламную строку на все страницы
 // Меняем этот файл — обновляется на всех страницах сайта
 
 (function(){
-  // Рекламная строка сверху
+  // ===== Рекламная строка сверху (сквозная) =====
   var topBanner = ''+
-    '<div style="background:linear-gradient(90deg,#7c3aed,#5b21b6);color:#fff;text-align:center;padding:8px 20px;font-size:14px;">'+
-    '<a href="https://stiva.ai" style="color:#fff;text-decoration:none;font-weight:600;">⚡ Все нейросети в одной подписке — STIVA.ai. 80+ моделей от 495 ₽. Оплата МИР и СБП →</a>'+
+    '<div class="top-banner">'+
+      '<a href="https://stiva.ai">⚡ Все нейросети в одной подписке — STIVA.ai. 80+ моделей от 495 ₽. Оплата МИР и СБП →</a>'+
     '</div>';
 
-  // Шапка
+  // ===== Шапка (без поиска, с категориями) =====
   var header = ''+
-    '<header style="background:#161b22;border-bottom:1px solid #30363d;position:sticky;top:0;z-index:100;">'+
-    '<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1200px;margin:0 auto;gap:20px;flex-wrap:wrap;">'+
-      '<a href="/" style="font-size:22px;font-weight:700;color:#e6edf3;text-decoration:none;">Топ<span style="color:#7c3aed;">Нейросети</span></a>'+
-      '<nav style="display:flex;gap:20px;align-items:center;">'+
-        '<a href="/models/" style="color:#8b949e;text-decoration:none;font-size:15px;">Нейросети</a>'+
-        '<a href="/competitors/" style="color:#8b949e;text-decoration:none;font-size:15px;">Агрегаторы</a>'+
-        '<a href="/rating/" style="color:#8b949e;text-decoration:none;font-size:15px;">Рейтинг</a>'+
-        '<a href="/reviews/" style="color:#8b949e;text-decoration:none;font-size:15px;">Отзывы</a>'+
+    '<div class="header-inner">'+
+      '<a href="/" class="logo">Топ<span>Нейросети</span></a>'+
+      '<nav class="nav" id="nav">'+
+        '<a href="/models/" class="nav-link">Нейросети</a>'+
+        '<a href="/competitors/" class="nav-link">Агрегаторы</a>'+
+        '<div class="nav-dropdown-wrap">'+
+          '<a href="/categories/" class="nav-link">Категории ▾</a>'+
+          '<div class="nav-dropdown">'+
+            '<div class="nav-dropdown-col">'+
+              '<h5>Текст</h5>'+
+              '<a href="/categories/text/chat/">Чат с ИИ</a>'+
+              '<a href="/categories/text/articles/">Статьи</a>'+
+              '<a href="/categories/text/copywriting/">Копирайтинг</a>'+
+              '<a href="/categories/text/documents/">Анализ документов</a>'+
+              '<a href="/categories/text/essays/">Рефераты</a>'+
+              '<a href="/categories/text/legal/">Юридические документы</a>'+
+              '<a href="/categories/text/translate/">Перевод текста</a>'+
+              '<a href="/categories/text/photo-prompt/">Промпт по фото</a>'+
+              '<a href="/categories/text/presentations/">Презентации</a>'+
+            '</div>'+
+            '<div class="nav-dropdown-col">'+
+              '<h5>Изображения</h5>'+
+              '<a href="/categories/image/photo/">ИИ-фото</a>'+
+              '<a href="/categories/image/editor/">Редактор фото</a>'+
+              '<a href="/categories/image/face-swap/">Замена лица</a>'+
+              '<a href="/categories/image/remove-bg/">Удаление фона</a>'+
+              '<a href="/categories/image/enhance/">Улучшение качества</a>'+
+            '</div>'+
+            '<div class="nav-dropdown-col">'+
+              '<h5>Видео</h5>'+
+              '<a href="/categories/video/editor/">Редактор видео</a>'+
+              '<a href="/categories/video/avatar/">ИИ-Аватар</a>'+
+              '<a href="/categories/video/dance/">ИИ-танцы</a>'+
+              '<a href="/categories/video/animate/">Оживление фото</a>'+
+              '<a href="/categories/video/enhance/">Улучшение качества</a>'+
+            '</div>'+
+            '<div class="nav-dropdown-col">'+
+              '<h5>Музыка</h5>'+
+              '<a href="/categories/music/songs/">Создание песен</a>'+
+              '<a href="/categories/music/tts/">Озвучка текста</a>'+
+              '<a href="/categories/music/voice-clone/">Клон голоса</a>'+
+              '<a href="/categories/music/effects/">Музыкальные эффекты</a>'+
+              '<a href="/categories/music/noise/">Удаление шума</a>'+
+            '</div>'+
+            '<div class="nav-dropdown-col">'+
+              '<h5>Другое</h5>'+
+              '<a href="/categories/programming/">Программирование</a>'+
+              '<a href="/categories/agents/">ИИ-агенты</a>'+
+              '<a href="/categories/api/">API</a>'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+        '<a href="/rating/" class="nav-link">Рейтинг</a>'+
+        '<a href="/reviews/" class="nav-link">Отзывы</a>'+
       '</nav>'+
-      '<input type="text" id="site-search" placeholder="Поиск нейросети..." style="flex:1;max-width:300px;padding:8px 14px;background:#0d1117;border:1px solid #30363d;border-radius:8px;color:#e6edf3;font-size:14px;outline:none;" onfocus="window.location.href=\'/?search=\'">'+
-    '</div>'+
-    '</header>';
-
-  // CTA-баннер внизу
-  var ctaBanner = ''+
-    '<div style="text-align:center;background:linear-gradient(135deg,#7c3aed,#5b21b6);border-radius:16px;padding:28px;margin:32px 20px;max-width:900px;margin-left:auto;margin-right:auto;">'+
-    '<h3 style="color:#fff;font-size:22px;margin-bottom:8px;">Все нейросети в одной подписке</h3>'+
-    '<p style="color:#e9d5ff;margin-bottom:16px;">STIVA.ai — 80+ моделей: текст, изображения, видео, аудио. Оплата МИР и СБП, без VPN.</p>'+
-    '<a href="https://stiva.ai" style="display:inline-block;background:#fff;color:#7c3aed;padding:12px 32px;border-radius:8px;font-weight:700;font-size:16px;text-decoration:none;">Попробовать бесплатно</a>'+
+      '<button class="hamburger" id="hamburger" aria-label="Меню" onclick="toggleMenu()">'+
+        '<span></span><span></span><span></span>'+
+      '</button>'+
     '</div>';
 
-  // Подвал
+  // ===== Подвал =====
   var footer = ''+
-    '<footer style="text-align:center;padding:32px 20px;border-top:1px solid #30363d;color:#8b949e;font-size:14px;margin-top:40px;">'+
-    '<div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-bottom:16px;">'+
-      '<a href="/models/" style="color:#7c3aed;text-decoration:none;">Нейросети</a>'+
-      '<a href="/competitors/" style="color:#7c3aed;text-decoration:none;">Агрегаторы</a>'+
-      '<a href="/rating/" style="color:#7c3aed;text-decoration:none;">Рейтинг</a>'+
-      '<a href="/reviews/" style="color:#7c3aed;text-decoration:none;">Отзывы</a>'+
-      '<a href="https://stiva.ai" style="color:#7c3aed;text-decoration:none;">STIVA.ai</a>'+
-    '</div>'+
-    '<p>© 2026 Топ Нейросети — каталог нейросетей. Все права защищены.</p>'+
-    '</footer>';
+    '<div class="footer-inner">'+
+      '<div class="footer-col">'+
+        '<div class="logo">Топ<span>Нейросети</span></div>'+
+        '<p>Каталог нейросетей 2026: обзоры, отзывы, рейтинги.</p>'+
+      '</div>'+
+      '<div class="footer-col">'+
+        '<h4>Разделы</h4>'+
+        '<a href="/models/">Нейросети</a>'+
+        '<a href="/competitors/">Агрегаторы</a>'+
+        '<a href="/rating/">Рейтинг</a>'+
+        '<a href="/reviews/">Отзывы</a>'+
+      '</div>'+
+      '<div class="footer-col">'+
+        '<h4>Категории</h4>'+
+        '<a href="/categories/text/chat/">Текст</a>'+
+        '<a href="/categories/image/photo/">Изображения</a>'+
+        '<a href="/categories/video/editor/">Видео</a>'+
+        '<a href="/categories/music/songs/">Аудио</a>'+
+      '</div>'+
+      '<div class="footer-col">'+
+        '<h4>О проекте</h4>'+
+        '<p>© 2026 ТопНейросети</p>'+
+        '<a href="https://stiva.ai">STIVA.ai</a>'+
+      '</div>'+
+    '</div>';
 
-  // Вставляем
-  function insertComponent(id, html){
-    var el = document.getElementById(id);
-    if(el) el.innerHTML = html;
-  }
-
-  // Favicon
+  // ===== Favicon =====
   var fav = document.createElement('link');
   fav.rel = 'icon';
   fav.type = 'image/png';
   fav.href = '/assets/favicon.png';
   document.head.appendChild(fav);
 
-  // Рекламная строка — в начало body
-  var topEl = document.getElementById('top-banner');
-  if(topEl){ topEl.innerHTML = topBanner; }
+  // ===== Рекламная строка — в начало body (на всех страницах) =====
+  var bannerDiv = document.createElement('div');
+  bannerDiv.innerHTML = topBanner;
+  if(document.body && document.body.firstChild){
+    document.body.insertBefore(bannerDiv.firstChild, document.body.firstChild);
+  }
 
-  // Шапка
-  var headerEl = document.getElementById('site-header');
+  // ===== Шапка — заменяем inline header на всех страницах =====
+  var headerEl = document.querySelector('.header');
   if(headerEl){ headerEl.innerHTML = header; }
 
-  // CTA
-  var ctaEl = document.getElementById('site-cta');
-  if(ctaEl){ ctaEl.innerHTML = ctaBanner; }
-
-  // Подвал
-  var footerEl = document.getElementById('site-footer');
+  // ===== Подвал — заменяем inline footer =====
+  var footerEl = document.querySelector('.footer');
   if(footerEl){ footerEl.innerHTML = footer; }
+
+  // ===== Удаляем CTA-баннеры снизу страниц =====
+  document.querySelectorAll('.cta').forEach(function(el){ el.remove(); });
 })();

@@ -21,24 +21,7 @@
 <link rel="icon" type="image/png" href="../assets/favicon.png">
 </head>
 <body>
-<header class="header">
-<div class="header-inner">
-<a href="../../" class="logo">Топ<span>Нейросети</span></a>
-<nav class="nav" id="nav">
-<a href="../../models/" class="nav-link">Нейросети</a>
-<a href="../../competitors/" class="nav-link">Агрегаторы</a>
-<a href="../../rating/" class="nav-link">Рейтинг</a>
-<a href="../../reviews/" class="nav-link">Отзывы</a>
-</nav>
-<div class="search">
-<input type="text" id="search" placeholder="Поиск нейросети..." oninput="filterCards()" autocomplete="off">
-<div class="search-results" id="search-results"></div>
-</div>
-<button class="hamburger" id="hamburger" aria-label="Меню" onclick="toggleMenu()">
-<span></span><span></span><span></span>
-</button>
-</div>
-</header>
+<header class="header"></header>
 
 <div class="page-layout">
 <div class="page-content">
@@ -46,7 +29,13 @@
 <div class="warning">⚠️ Meta Platforms Inc. признана экстремистской организацией и запрещена на территории РФ</div>
 <h1>Meta AI</h1>
 <div class="warning">⚠️ Meta Platforms Inc. признана экстремистской организацией и запрещена на территории РФ</div>
-<img class="page-screenshot" src="https://stiva.ai/media/cb7cb3b3-e963-412d-aa3e-8c2b5abef7ff-img_d6eeb3efad87.png" alt="Meta AI — интерфейс">
+<div class="browser-window">
+<div class="browser-bar">
+<div class="browser-dots"><span></span><span></span><span></span></div>
+<div class="browser-url">meta.ai</div>
+</div>
+<img src="https://stiva.ai/media/cb7cb3b3-e963-412d-aa3e-8c2b5abef7ff-img_d6eeb3efad87.png" alt="Meta AI — интерфейс">
+</div>
 
 <div class="info-box">
 <p><strong>Разработчик:</strong> Meta*</p>
@@ -83,12 +72,6 @@ Meta AI доступна через чат-бота и API. Llama — одна �
 <span class="review-count">14 отзывов</span>
 </div>
 <div id="reviews" class="reviews"></div>
-<div class="cta">
-<h3>Попробуйте Meta AI в STIVA.ai</h3>
-<p>80+ нейросетей в одной подписке. Оплата МИР и СБП, без VPN.</p>
-<a href="https://stiva.ai">Зарегистрироваться</a>
-</div>
-</div>
 <aside class="sidebar">
 <h3>Похожие нейросети</h3>
 <a href="../models/chatgpt/" class="sidebar-card">
@@ -123,33 +106,7 @@ Meta AI доступна через чат-бота и API. Llama — одна �
 </aside>
 </div>
 
-<footer class="footer">
-<div class="footer-inner">
-<div class="footer-col">
-<div class="logo">Топ<span>Нейросети</span></div>
-<p>Каталог нейросетей 2026: обзоры, отзывы, рейтинги.</p>
-</div>
-<div class="footer-col">
-<h4>Разделы</h4>
-<a href="../../models/">Нейросети</a>
-<a href="../../competitors/">Агрегаторы</a>
-<a href="../../rating/">Рейтинг</a>
-<a href="../../reviews/">Отзывы</a>
-</div>
-<div class="footer-col">
-<h4>Категории</h4>
-<a href="../../models/">Текст</a>
-<a href="../../models/">Изображения</a>
-<a href="../../models/">Видео</a>
-<a href="../../models/">Аудио</a>
-</div>
-<div class="footer-col">
-<h4>О проекте</h4>
-<p>© 2026 ТопНейросети</p>
-<a href="https://stiva.ai">STIVA.ai</a>
-</div>
-</div>
-</footer>
+<footer class="footer"></footer>
 <script src="../../assets/js/reviews.js"></script>
 <script>initReviews('reviews','meta',7)</script>
 <script src="../../assets/js/main.js"></script>
