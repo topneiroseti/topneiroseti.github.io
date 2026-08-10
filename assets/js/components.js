@@ -20,6 +20,8 @@
       '<nav class="nav" id="nav">'+
         '<a href="/models/" class="nav-link">Нейросети</a>'+
         '<a href="/competitors/" class="nav-link">Агрегаторы</a>'+
+        '<a href="/api-aggregators/" class="nav-link">API</a>'+
+        '<a href="/agents/" class="nav-link">ИИ-агенты</a>'+
         '<div class="nav-dropdown-wrap">'+
           '<a href="/categories/" class="nav-link">Категории ▾</a>'+
           '<div class="nav-dropdown">'+
@@ -86,6 +88,8 @@
         '<h4>Разделы</h4>'+
         '<a href="/models/">Нейросети</a>'+
         '<a href="/competitors/">Агрегаторы</a>'+
+        '<a href="/api-aggregators/">API</a>'+
+        '<a href="/agents/">ИИ-агенты</a>'+
         '<a href="/rating/">Рейтинг</a>'+
         '<a href="/reviews/">Отзывы</a>'+
       '</div>'+
