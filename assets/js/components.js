@@ -103,7 +103,6 @@
       '<div class="footer-col">'+
         '<h4>О проекте</h4>'+
         '<p>© 2026 ТопНейросети</p>'+
-        '<a href="https://stiva.ai">STIVA.ai</a>'+
       '</div>'+
     '</div>';
 
