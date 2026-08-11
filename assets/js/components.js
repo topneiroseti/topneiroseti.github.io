@@ -22,6 +22,7 @@
         '<a href="/competitors/" class="nav-link">Агрегаторы</a>'+
         '<a href="/api-aggregators/" class="nav-link">API</a>'+
         '<a href="/agents/" class="nav-link">ИИ-агенты</a>'+
+        '<a href="/photo/" class="nav-link">ИИ-фото</a>'+
         '<div class="nav-dropdown-wrap">'+
           '<a href="/categories/" class="nav-link">Категории ▾</a>'+
           '<div class="nav-dropdown">'+
@@ -69,7 +70,6 @@
             '</div>'+
           '</div>'+
         '</div>'+
-        '<a href="/rating/" class="nav-link">Рейтинг</a>'+
         '<a href="/reviews/" class="nav-link">Отзывы</a>'+
       '</nav>'+
       '<button class="hamburger" id="hamburger" aria-label="Меню" onclick="toggleMenu()">'+
@@ -90,7 +90,7 @@
         '<a href="/competitors/">Агрегаторы</a>'+
         '<a href="/api-aggregators/">API</a>'+
         '<a href="/agents/">ИИ-агенты</a>'+
-        '<a href="/rating/">Рейтинг</a>'+
+        '<a href="/photo/">ИИ-фото</a>'+
         '<a href="/reviews/">Отзывы</a>'+
       '</div>'+
       '<div class="footer-col">'+
