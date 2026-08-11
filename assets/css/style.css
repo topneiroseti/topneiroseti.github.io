@@ -344,3 +344,34 @@ a.card .card-body strong{font-size:16px;color:var(--text);line-height:1.3}
 @media(max-width:480px){
 .rating-table th:nth-child(3),.rating-table td:nth-child(3){display:none}
 }
+
+/* ===== ИИ-фото статьи ===== */
+.photo-hero{margin:0 0 32px;border-radius:14px;overflow:hidden;border:1px solid var(--border)}
+.photo-hero img{width:100%;height:auto;display:block}
+
+.photo-item{margin:0 0 44px}
+.photo-item h3{font-size:21px;margin:0 0 16px}
+.photo-item img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--border)}
+
+.prompt-box{position:relative;margin:16px 0 0;background:#161b22;border:1px solid #30363d;border-left:3px solid var(--accent);border-radius:10px;padding:18px 20px 18px 20px}
+.prompt-box .prompt-label{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px}
+.prompt-box p{margin:0;font-size:14.5px;line-height:1.7;color:#c9d1d9;white-space:pre-wrap}
+.copy-btn{position:absolute;top:14px;right:14px;padding:6px 14px;background:transparent;border:1px solid #30363d;border-radius:7px;color:var(--text-muted);font-size:12px;font-weight:600;cursor:pointer;transition:all .15s ease;font-family:inherit}
+.copy-btn:hover{border-color:var(--accent);color:var(--accent)}
+.copy-btn.copied{border-color:#3fb950;color:#3fb950}
+
+.page-content h2{margin:44px 0 18px;font-size:26px}
+.page-content h3{margin:32px 0 14px}
+.page-content p{margin:0 0 16px;line-height:1.75}
+.page-content ul{margin:0 0 24px}
+
+.ring-block{margin-top:52px;padding-top:36px;border-top:1px solid var(--border)}
+.ring-block h2{margin:0 0 22px}
+.ring-grid{display:flex;flex-wrap:wrap;gap:18px}
+.ring-card{flex:1 1 calc(25% - 14px);min-width:200px;background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s ease,border-color .2s ease;display:flex;flex-direction:column}
+.ring-card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.ring-card img{width:100%;height:130px;object-fit:cover;display:block}
+.ring-card span{padding:14px;font-size:14.5px;font-weight:600;line-height:1.4}
+
+@media(max-width:900px){.ring-card{flex:1 1 calc(50% - 9px)}}
+@media(max-width:560px){.ring-card{flex:1 1 100%}.prompt-box{padding:16px}.copy-btn{position:static;margin-bottom:10px;display:block;width:100%}}
