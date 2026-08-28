@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Baseten — обзор API агрегатора: цены, отзывы</title>
-<meta name="description" content="Baseten — API агрегатор. Обзор, информация об API, цены, преимущества и недостатки, отзывы.">
+<title>Baseten - обзор API агрегатора: цены, отзывы</title>
+<meta name="description" content="Baseten - API агрегатор. Обзор, информация об API, цены, преимущества и недостатки, отзывы.">
 <meta name="keywords" content="Baseten, Baseten API, Baseten цены, обзор Baseten">
-<meta property="og:title" content="Baseten — обзор API агрегатора">
-<meta property="og:description" content="Baseten — API агрегатор. Обзор, цены, отзывы.">
+<meta property="og:title" content="Baseten - обзор API агрегатора">
+<meta property="og:description" content="Baseten - API агрегатор. Обзор, цены, отзывы.">
 
 <meta property="og:url" content="https://topneiroseti.github.io/api-aggregators/baseten/">
 <meta property="og:type" content="article">
@@ -16,7 +16,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Baseten","applicationCategory":"API","operatingSystem":"Web","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","reviewCount":"8"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://topneiroseti.github.io/"},{"@type":"ListItem","position":2,"name":"API агрегаторы","item":"https://topneiroseti.github.io/api-aggregators/"},{"@type":"ListItem","position":3,"name":"Baseten","item":"https://topneiroseti.github.io/api-aggregators/baseten/"}]}</script>
 <link rel="icon" type="image/png" href="/assets/favicon.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Дороже ли это прямого доступа?","acceptedAnswer":{"@type":"Answer","text":"Обычно да — агрегатор берёт наценку. Экономия получается на скорости разработки и отсутствии отдельных договоров с каждым поставщиком."}},{"@type":"Question","name":"Насколько это надёжно?","acceptedAnswer":{"@type":"Answer","text":"Крупные агрегаторы держат аптайм на уровне поставщиков и добавляют автоматическое переключение при сбоях."}},{"@type":"Question","name":"Совместимо ли с OpenAI SDK?","acceptedAnswer":{"@type":"Answer","text":"Большинство агрегаторов поддерживает OpenAI-совместимый формат — достаточно поменять base_url и ключ."}},{"@type":"Question","name":"Как считается оплата?","acceptedAnswer":{"@type":"Answer","text":"По токенам входа и выхода, как у поставщиков моделей, плюс наценка сервиса. Тарифы обычно есть в открытом виде."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Дороже ли это прямого доступа?","acceptedAnswer":{"@type":"Answer","text":"Обычно да - агрегатор берёт наценку. Экономия получается на скорости разработки и отсутствии отдельных договоров с каждым поставщиком."}},{"@type":"Question","name":"Насколько это надёжно?","acceptedAnswer":{"@type":"Answer","text":"Крупные агрегаторы держат аптайм на уровне поставщиков и добавляют автоматическое переключение при сбоях."}},{"@type":"Question","name":"Совместимо ли с OpenAI SDK?","acceptedAnswer":{"@type":"Answer","text":"Большинство агрегаторов поддерживает OpenAI-совместимый формат - достаточно поменять base_url и ключ."}},{"@type":"Question","name":"Как считается оплата?","acceptedAnswer":{"@type":"Answer","text":"По токенам входа и выхода, как у поставщиков моделей, плюс наценка сервиса. Тарифы обычно есть в открытом виде."}}]}</script>
 </head>
 <body>
 <header class="header"></header>
@@ -81,10 +81,10 @@
 <div class="seo-extra">
 <h2>Зачем нужен API-агрегатор</h2>
 <ul>
-<li><strong>Одна интеграция вместо десяти</strong> — подключаетесь один раз и получаете доступ к моделям разных поставщиков.</li>
-<li><strong>Быстрая смена модели</strong> — можно поменять модель в конфиге, не переписывая код.</li>
-<li><strong>Отказоустойчивость</strong> — при сбое одного поставщика запрос уходит к резервному.</li>
-<li><strong>Единый биллинг</strong> — один счёт и общая статистика вместо десятка личных кабинетов.</li>
+<li><strong>Одна интеграция вместо десяти</strong> - подключаетесь один раз и получаете доступ к моделям разных поставщиков.</li>
+<li><strong>Быстрая смена модели</strong> - можно поменять модель в конфиге, не переписывая код.</li>
+<li><strong>Отказоустойчивость</strong> - при сбое одного поставщика запрос уходит к резервному.</li>
+<li><strong>Единый биллинг</strong> - один счёт и общая статистика вместо десятка личных кабинетов.</li>
 </ul>
 
 <h2>Как выбрать API-агрегатор</h2>
@@ -92,20 +92,20 @@
 <li><strong>Каталог моделей.</strong> Убедитесь, что нужные вам модели доступны и обновляются вовремя.</li>
 <li><strong>Совместимость.</strong> OpenAI-совместимый формат позволяет подключиться без переписывания кода.</li>
 <li><strong>Цена.</strong> Сравните наценку к базовой стоимости токенов у поставщика.</li>
-<li><strong>Скорость.</strong> Посредник добавляет задержку — проверьте латентность на тестовых запросах.</li>
+<li><strong>Скорость.</strong> Посредник добавляет задержку - проверьте латентность на тестовых запросах.</li>
 <li><strong>Лимиты.</strong> Уточните rate limits и возможность их повысить под нагрузку.</li>
 </ul>
 
 <h2>Частые вопросы</h2>
 <h3>Дороже ли это прямого доступа?</h3>
-<p>Обычно да — агрегатор берёт наценку. Экономия получается на скорости разработки и отсутствии отдельных договоров с каждым поставщиком.</p>
+<p>Обычно да - агрегатор берёт наценку. Экономия получается на скорости разработки и отсутствии отдельных договоров с каждым поставщиком.</p>
 <h3>Насколько это надёжно?</h3>
 <p>Крупные агрегаторы держат аптайм на уровне поставщиков и добавляют автоматическое переключение при сбоях.</p>
 <h3>Совместимо ли с OpenAI SDK?</h3>
-<p>Большинство агрегаторов поддерживает OpenAI-совместимый формат — достаточно поменять base_url и ключ.</p>
+<p>Большинство агрегаторов поддерживает OpenAI-совместимый формат - достаточно поменять base_url и ключ.</p>
 <h3>Как считается оплата?</h3>
 <p>По токенам входа и выхода, как у поставщиков моделей, плюс наценка сервиса. Тарифы обычно есть в открытом виде.</p>
-<div class="info-box" style="margin-top:28px"><p><strong>Все нейросети в одной подписке.</strong> Вместо отдельной оплаты каждого сервиса можно подключить агрегатор <a href="/aggregators/stiva-ai/">STIVA.ai</a> — 80+ моделей: текст, изображения, видео и аудио. Оплата картой МИР и через СБП, без VPN.</p></div>
+<div class="info-box" style="margin-top:28px"><p><strong>Все нейросети в одной подписке.</strong> Вместо отдельной оплаты каждого сервиса можно подключить агрегатор <a href="/aggregators/stiva-ai/">STIVA.ai</a> - 80+ моделей: текст, изображения, видео и аудио. Оплата картой МИР и через СБП, без VPN.</p></div>
 </div>
 <div id="reviews" class="reviews"></div>
 </div>
