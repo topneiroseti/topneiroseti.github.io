@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GPT-6 Sol - обзор нейросети: тарифы, бенчмарки, отзывы</title>
+<meta name="description" content="GPT-6 Sol от OpenAI - модель для кодинга и агентных задач. Контекст 1.05M токенов, $2/$10 за 1M, Terminal-Bench 66.4%. Обзор, тарифы, бенчмарки, отзывы.">
+<meta name="keywords" content="GPT-6 Sol, GPT-6 Sol нейросеть, обзор GPT-6 Sol, GPT-6 Sol тарифы, GPT-6 Sol бенчмарки">
+<meta property="og:title" content="GPT-6 Sol - обзор нейросети">
+<meta property="og:description" content="GPT-6 Sol от OpenAI - модель для кодинга и агентных задач. Контекст 1.05M токенов, $2/$10 за 1M. Обзор, тарифы, бенчмарки, отзывы.">
+<meta property="og:url" content="https://topneiroseti.github.io/models/gpt-6-sol/">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GPT-6 Sol - обзор нейросети">
+<meta name="twitter:description" content="GPT-6 Sol от OpenAI - модель для кодинга и агентных задач. Контекст 1.05M токенов, $2/$10 за 1M.">
+<link rel="canonical" href="https://topneiroseti.github.io/models/gpt-6-sol/">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"GPT-6 Sol","applicationCategory":"Текст","operatingSystem":"Web","offers":{"@type":"Offer","price":"2","priceCurrency":"USD","description":"$2 за 1M входных токенов"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://topneiroseti.github.io/"},{"@type":"ListItem","position":2,"name":"Нейросети","item":"https://topneiroseti.github.io/models/"},{"@type":"ListItem","position":3,"name":"GPT-6 Sol","item":"https://topneiroseti.github.io/models/gpt-6-sol/"}]}</script>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Чем GPT-6 Sol отличается от GPT-6 Astra?","acceptedAnswer":{"@type":"Answer","text":"Sol - средний tier в семействе GPT-6, ниже Astra. Создан для сложных задач: кодинг, профессиональная работа, агентные сценарии. Astra остаётся флагманом для самых требовательных проектов."}},{"@type":"Question","name":"Сколько стоит GPT-6 Sol?","acceptedAnswer":{"@type":"Answer","text":"$2 за 1M входных токенов и $10 за 1M выходных. Cache reads - $0.20 за 1M с 90% скидкой."}},{"@type":"Question","name":"Какой контекст у GPT-6 Sol?","acceptedAnswer":{"@type":"Answer","text":"1 056 000 токенов (1.05M), из которых 922 000 можно использовать на входе. Максимальный вывод - 128 000 токенов."}}]}</script>
+</head>
+<body>
+<header class="header"></header>
+
+<div class="page">
+<nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="../../">Главная</a> <span class="bc-sep">></span> <a href="../../models/">Нейросети</a> <span class="bc-sep">></span> <span>GPT-6 Sol</span></nav>
+<h1>GPT-6 Sol</h1>
+
+<div class="info-box">
+<p><strong>Разработчик:</strong> OpenAI</p>
+<p><strong>Категория:</strong> Текст, кодинг, агентные задачи</p>
+<p><strong>Дата релиза:</strong> 22 сентября 2026</p>
+<p><strong>Model ID:</strong> gpt-6-sol</p>
+</div>
+
+<p>GPT-6 Sol - средняя модель в семействе GPT-6 от OpenAI, ниже флагманской Astra. Создана для сложных задач: кодинг, профессиональная работа, агентные сценарии. Обучена методами GPT-6 Astra - с переносом достижений в профессиональной работе, фактуальности, кодинге и computer use в более быстрый и доступный формат.</p>
+
+<p>Контекстное окно 1.05M токенов, цена $2/$10 за 1M (на 50% дешевле GPT-5.6 Sol). На Terminal-Bench 4.0 набирает 66.4% - лучше всех моделей в своём классе. На DeepSWE v1.1 в пределах 1 процентного пункта от Claude Fable 5.1 при 80% меньшей стоимости за задачу.</p>
+
+<h2>Тарифы</h2>
+<ul>
+<li><strong>API (входные):</strong> $2 / 1M токенов (-50% vs GPT-5.6 Sol)</li>
+<li><strong>API (выходные):</strong> $10 / 1M токенов (-50%)</li>
+<li><strong>Cached input:</strong> $0.20 / 1M (90% скидка)</li>
+<li><strong>Cache writes:</strong> $2.50 / 1M</li>
+<li><strong>Batch API:</strong> 50% от стандарта</li>
+<li><strong>Prompts >272K:</strong> 2x на input и cache</li>
+</ul>
+
+<h2>Характеристики</h2>
+<table class="compare-table">
+<tr><th>Параметр</th><th>Значение</th></tr>
+<tr><td>Контекст</td><td>1 056 000 токенов</td></tr>
+<tr><td>Макс. ввод</td><td>922 000 токенов</td></tr>
+<tr><td>Макс. вывод</td><td>128 000 токенов</td></tr>
+<tr><td>Knowledge cutoff</td><td>20 апреля 2026</td></tr>
+<tr><td>Thinking</td><td>Adaptive (всегда включён)</td></tr>
+<tr><td>Effort</td><td>low / medium / high / xhigh / max</td></tr>
+</table>
+
+<h2>Бенчмарки</h2>
+<table class="compare-table">
+<tr><th>Тест</th><th>GPT-6 Sol</th><th>Конкуренты</th></tr>
+<tr><td>Terminal-Bench 4.0</td><td>66.4%</td><td>Fable 5.1: 55.8%, Astra: 57.9%</td></tr>
+<tr><td>DeepSWE v1.1 (max)</td><td>68.8%</td><td>Fable 5.1: 69.9% (xhigh)</td></tr>
+<tr><td>FrontierCode v1.1</td><td>54.4%</td><td>Fable 5.1: 50.3%, Astra: 53.3%</td></tr>
+<tr><td>CursorBench 4.0</td><td>57.8%</td><td>GPT-5.6 Sol: 41.7%</td></tr>
+<tr><td>OSWorld 2.0 (xhigh)</td><td>60.5%</td><td>Opus 5: 60.3% (medium)</td></tr>
+<tr><td>Agents' Last Exam (max)</td><td>56.4%</td><td>Opus 5: ниже</td></tr>
+</table>
+
+<h2>Преимущества и недостатки</h2>
+<table class="compare-table">
+<tr><th class="pro">Преимущества</th><th class="con">Недостатки</th></tr>
+<tr>
+<td><ul>
+<li>50% дешевле GPT-5.6 Sol</li>
+<li>Контекст 1.05M токенов</li>
+<li>Terminal-Bench 66.4% - лучший в классе</li>
+<li>90% скидка на cache reads</li>
+<li>В 2 раза меньше ошибок чем GPT-5.6 Sol</li>
+<li>Улучшенный стиль коммуникации</li>
+</ul></td>
+<td><ul>
+<li>Astra сильнее на сложных задачах</li>
+<li>Не в обычном Chat (только Work и Codex)</li>
+<li>Требует VPN без агрегатора</li>
+</ul></td>
+</tr>
+</table>
+
+<div class="page-rating">
+<span class="stars big-stars">★★★★★</span>
+<span class="rating-value">4.9</span>
+<span class="review-count">12 отзывов</span>
+</div>
+
+<div class="seo-extra">
+<h2>Для чего подходит</h2>
+<ul>
+<li><strong>Кодинг</strong> - миграции кодовой базы, аудиты, рефакторинг. 680K строк миграции за день.</li>
+<li><strong>Агентные задачи</strong> - длинные многошаговые сценарии, автономная работа.</li>
+<li><strong>Computer use</strong> - OSWorld 2.0: 60.5%, сопоставимо с Opus 5 при 80% меньшей стоимости.</li>
+<li><strong>Профессиональная работа</strong> - документы, аналитика, отчёты, презентации.</li>
+</ul>
+
+<h2>Сравнение в семействе GPT-6</h2>
+<ul>
+<li><strong>GPT-6 Astra</strong> - флагман, лучший для самых сложных задач. Дороже.</li>
+<li><strong>GPT-6 Sol</strong> - средний tier, баланс цены и мощности. $2/$10 за 1M.</li>
+<li><strong>GPT-6 Luna</strong> - массовые задачи, самая дешёвая. $0.10/$0.50 за 1M.</li>
+</ul>
+
+<h2>Частые вопросы</h2>
+<h3>Чем GPT-6 Sol отличается от GPT-6 Astra?</h3>
+<p>Sol - средний tier в семействе GPT-6, ниже Astra. Создан для сложных задач: кодинг, профессиональная работа, агентные сценарии. Astra остаётся флагманом для самых требовательных проектов.</p>
+<h3>Сколько стоит GPT-6 Sol?</h3>
+<p>$2 за 1M входных токенов и $10 за 1M выходных. Cache reads - $0.20 за 1M с 90% скидкой.</p>
+<h3>Какой контекст у GPT-6 Sol?</h3>
+<p>1 056 000 токенов (1.05M), из которых 922 000 можно использовать на входе. Максимальный вывод - 128 000 токенов.</p>
+<div class="info-box" style="margin-top:28px"><p><strong>Все нейросети в одной подписке.</strong> GPT-6 Sol доступен через агрегатор <a href="/aggregators/stiva-ai/">STIVA.ai</a> - 80+ моделей: текст, изображения, видео и аудио. Оплата картой МИР и через СБП, без VPN.</p></div>
+</div>
+<div id="reviews" class="reviews"></div>
+
+<section class="related-block">
+<h2>Похожие нейросети</h2>
+<div class="card-grid">
+<a href="/models/gpt-6-luna/" class="card">
+<div class="card-body">
+<span class="badge badge-text">Текст</span>
+<strong>GPT-6 Luna</strong>
+<span class="card-rating">★★★★★ 4.8</span>
+</div>
+</a>
+<a href="/models/chatgpt/" class="card">
+<div class="card-body">
+<span class="badge badge-text">Текст</span>
+<strong>ChatGPT</strong>
+<span class="card-rating">★★★★★ 4.9</span>
+</div>
+</a>
+<a href="/models/claude/" class="card">
+<div class="card-body">
+<span class="badge badge-text">Текст</span>
+<strong>Claude</strong>
+<span class="card-rating">★★★★★ 4.8</span>
+</div>
+</a>
+<a href="/models/deepseek/" class="card">
+<div class="card-body">
+<span class="badge badge-text">Текст</span>
+<strong>DeepSeek</strong>
+<span class="card-rating">★★★★☆ 4.4</span>
+</div>
+</a>
+</div>
+</section>
+</div>
+<footer class="footer"></footer>
+<script src="/assets/js/reviews.js"></script>
+<script>initReviews('reviews','gpt-6-sol',12)</script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/components.js"></script>
+</body>
+</html>
