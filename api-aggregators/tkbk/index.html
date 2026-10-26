@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TKBK - обзор API агрегатора: цены, модели, подключение</title>
+<meta name="description" content="TKBK - API агрегатор (шлюз) к Claude, GPT, Gemini, Grok, DeepSeek и GLM с оплатой в рублях. Обзор, информация об API, цены, преимущества и недостатки.">
+<meta name="keywords" content="TKBK, TKBK API, TKBK цены, обзор TKBK, tkbk.online">
+<meta property="og:title" content="TKBK - обзор API агрегатора">
+<meta property="og:description" content="TKBK - API агрегатор. Обзор, цены, подключение.">
+
+<meta property="og:url" content="https://topneiroseti.github.io/api-aggregators/tkbk/">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://topneiroseti.github.io/api-aggregators/tkbk/">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"TKBK","applicationCategory":"API","operatingSystem":"Web","url":"https://tkbk.online"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://topneiroseti.github.io/"},{"@type":"ListItem","position":2,"name":"API агрегаторы","item":"https://topneiroseti.github.io/api-aggregators/"},{"@type":"ListItem","position":3,"name":"TKBK","item":"https://topneiroseti.github.io/api-aggregators/tkbk/"}]}</script>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Дороже ли это прямого доступа?","acceptedAnswer":{"@type":"Answer","text":"Обычно да - агрегатор берёт наценку. Экономия получается на скорости разработки и отсутствии отдельных договоров с каждым поставщиком."}},{"@type":"Question","name":"Насколько это надёжно?","acceptedAnswer":{"@type":"Answer","text":"Крупные агрегаторы держат аптайм на уровне поставщиков и добавляют автоматическое переключение при сбоях."}},{"@type":"Question","name":"Совместимо ли с OpenAI SDK?","acceptedAnswer":{"@type":"Answer","text":"Большинство агрегаторов поддерживает OpenAI-совместимый формат - достаточно поменять base_url и ключ."}},{"@type":"Question","name":"Как считается оплата?","acceptedAnswer":{"@type":"Answer","text":"По токенам входа и выхода, как у поставщиков моделей, плюс наценка сервиса. Тарифы обычно есть в открытом виде."}}]}</script>
+</head>
+<body>
+<header class="header"></header>
+<div class="page-layout">
+<div class="page-content">
+<nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="../../">Главная</a> <span class="bc-sep">›</span> <a href="../../api-aggregators/">API агрегаторы</a> <span class="bc-sep">›</span> <span>TKBK</span></nav>
+<h1>TKBK</h1>
+<div class="browser-window">
+<div class="browser-bar">
+<div class="browser-dots"><span></span><span></span><span></span></div>
+<div class="browser-url">tkbk.online</div>
+</div>
+<div style="height:300px;background:linear-gradient(135deg,#1a1a2e,#16213e,#0d7377);display:flex;align-items:center;justify-content:center;">
+<span style="color:#666;font-size:24px;">TKBK</span>
+</div>
+</div>
+<div class="info-box">
+<p><strong>Категория:</strong> <span class="badge badge-api">API</span></p>
+<p><strong>Официальный сайт:</strong> tkbk.online</p>
+</div>
+<div class="info-box">
+<p><strong>Тип API:</strong> API-агрегатор (шлюз)</p>
+<p><strong>OpenAI-совместимость:</strong> да (https://api.tkbk.online/v1), плюс формат Anthropic Messages для Claude Code (https://api.tkbk.online)</p>
+</div>
+<p>Сайт: tkbk.online
+Тип: API-агрегатор, независимый сервис, не связан с разработчиками моделей
+Модели: 18 моделей Claude, GPT, Gemini, Grok, DeepSeek и GLM по одному ключу
+Контакты: Telegram @nukind (поддержка), бот @TKBKStorebot, канал @claude_api_tkbk</p>
+<h2>Цены</h2>
+<ul>
+<li>Pay-as-you-go по фактическим токенам, пакеты от $1 баланса</li>
+<li>Цены моделей указаны в «$ баланса» за 1M токенов; $1 баланса = 5,80 ₽ в любом пакете</li>
+<li>Пример: Claude Sonnet 5 - 11,6 ₽ за 1M входных и 58 ₽ за 1M выходных токенов (каталог на 17.10.2026)</li>
+<li>Оплата картой, ЮMoney или SberPay на сайте; криптовалютой и Telegram Stars - в Telegram-боте</li>
+<li>Баланс не сгорает; бесплатный пробный ключ $0,3 после входа через Telegram</li>
+<li>Открытый прайс в JSON: https://tkbk.online/pricing.json</li>
+</ul>
+<h2>Преимущества и недостатки</h2>
+<table class="compare-table">
+<tr><th class="pro">✅ Преимущества</th><th class="con">❌ Недостатки</th></tr>
+<tr>
+<td><ul><li>Один ключ на Claude, GPT, Gemini, Grok, DeepSeek и GLM</li><li>Форматы OpenAI и Anthropic: Claude Code, Codex CLI, Cursor, Cline, n8n подключаются сменой base URL</li><li>Оплата в рублях, остаток не сгорает</li><li>Ежедневная публичная проверка моделей и аптайма: tkbk.online/verified</li><li>Несколько каналов на модель с автоматическим переключением при сбое</li></ul></td>
+<td><ul><li>Не официальный API разработчиков моделей - сервис-посредник</li><li>Нет оплаты по счёту и закрывающих документов для юрлиц</li><li>Цены в «$ баланса» нужно пересчитывать в рубли (×5,80)</li><li>Только модели из каталога, без редких и экспериментальных</li></ul></td>
+</tr>
+</table>
+
+<div class="seo-extra">
+<h2>Зачем нужен API-агрегатор</h2>
+<ul>
+<li><strong>Одна интеграция вместо десяти</strong> - подключаетесь один раз и получаете доступ к моделям разных поставщиков.</li>
+<li><strong>Быстрая смена модели</strong> - можно поменять модель в конфиге, не переписывая код.</li>
+<li><strong>Отказоустойчивость</strong> - при сбое одного поставщика запрос уходит к резервному.</li>
+<li><strong>Единый биллинг</strong> - один счёт и общая статистика вместо десятка личных кабинетов.</li>
+</ul>
+
+<h2>Как выбрать API-агрегатор</h2>
+<ul>
+<li><strong>Каталог моделей.</strong> Убедитесь, что нужные вам модели доступны и обновляются вовремя.</li>
+<li><strong>Совместимость.</strong> OpenAI-совместимый формат позволяет подключиться без переписывания кода.</li>
+<li><strong>Цена.</strong> Сравните наценку к базовой стоимости токенов у поставщика.</li>
+<li><strong>Скорость.</strong> Посредник добавляет задержку - проверьте латентность на тестовых запросах.</li>
+<li><strong>Лимиты.</strong> Уточните rate limits и возможность их повысить под нагрузку.</li>
+</ul>
+
+<h2>Частые вопросы</h2>
+<h3>Дороже ли это прямого доступа?</h3>
+<p>Обычно да - агрегатор берёт наценку. Экономия получается на скорости разработки и отсутствии отдельных договоров с каждым поставщиком.</p>
+<h3>Насколько это надёжно?</h3>
+<p>Крупные агрегаторы держат аптайм на уровне поставщиков и добавляют автоматическое переключение при сбоях.</p>
+<h3>Совместимо ли с OpenAI SDK?</h3>
+<p>Большинство агрегаторов поддерживает OpenAI-совместимый формат - достаточно поменять base_url и ключ.</p>
+<h3>Как считается оплата?</h3>
+<p>По токенам входа и выхода, как у поставщиков моделей, плюс наценка сервиса. Тарифы обычно есть в открытом виде.</p>
+</div>
+</div>
+</div>
+<footer class="footer"></footer>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/components.js"></script>
+</body>
+</html>
